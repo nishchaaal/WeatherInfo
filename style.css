@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #b6b6b6;
+}
+
+img {
+  width: 100%;
+}
+
+.header {
+  font-size: 3rem;
+  margin-bottom: 1em;
+}
+
+.main {
+  width: 400px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: #dbdbdb;
+}
+
+.info {
+  padding: 1em;
+  border-bottom: 1px solid #909090;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info,
+.gif-box {
+  height: 50%;
+}
+
+.data p {
+  font-size: 1.2rem;
+}
+
+.form {
+  margin-bottom: 1em;
+}
+
+.city-name {
+  padding: 0.6em;
+}
+
+.btn {
+  border: none;
+  padding: 0.3em 0.7em;
+  cursor: pointer;
+  background: #000000;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.details-container {
+  padding: 1em;
+}
+
+.gif-box {
+  border-radius: 0 20px 20px 0;
+  padding: 2em;
+}
+
+.error {
+  color: red;
+}
+
+@media (min-width: 600px) {
+  .main {
+    flex-direction: row;
+    width: 800px;
+    max-width: 800px;
+    height: 400px;
+  }
+
+  .info,
+  .gif-box {
+    width: 50%;
+    height: 100%;
+  }
+
+  .info {
+    border-bottom: none;
+    border-right: 1px solid #909090;
+  }
+}
