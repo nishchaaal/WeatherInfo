@@ -53,6 +53,7 @@ const getData = async (toSearch) => {
       notFound.classList.add("error");
       notFound.textContent = y.message;
       data.appendChild(notFound);
+      newGif("not found");
     } else {
       addDetails(y.name, y.main.temp, y.weather[0].description);
       newGif(y.weather[0].main);
@@ -65,6 +66,7 @@ const getData = async (toSearch) => {
 search.addEventListener("click", (e) => {
   e.preventDefault();
   if (cityName.value === "") {
+    data.innerHTML = "";
     const err = document.createElement("p");
     err.textContent = "Please enter a city";
     err.classList.add("error");
