@@ -47,8 +47,16 @@ const getData = async (toSearch) => {
       { mode: "cors" }
     );
     const y = await x.json();
-    addDetails(y.name, y.main.temp, y.weather[0].description);
-    newGif(y.weather[0].main);
+    if (y.cod === "404") {
+      data.innerHTML = "";
+      const notFound = document.createElement("p");
+      notFound.classList.add("error");
+      notFound.textContent = y.message;
+      data.appendChild(notFound);
+    } else {
+      addDetails(y.name, y.main.temp, y.weather[0].description);
+      newGif(y.weather[0].main);
+    }
   } catch (err) {
     console.log(err);
   }
